@@ -1,0 +1,228 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+header img {
+
+    float: left;
+    width:15%;
+    height:15;
+    left:-15px;
+    position: relative;
+    top:-5px;
+
+}
+header{
+
+    z-index:999;
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+    transition: 0.5s ease;
+
+}
+
+header .brand{
+
+color:white;
+font-size: 26px;
+font-weight: 700;
+text-transform: uppercase;
+text-decoration: none;
+font-family: 'Bebas Neue', cursive;
+letter-spacing: 2px;
+align-items: center;
+text-shadow: 2px 1px 2px black;
+
+
+}
+
+header .navigate{
+
+position: relative;
+}
+
+ header .navigate .navigate-items a{
+     position:relative;
+     color:white ;
+     font-size: 1em;
+     font-weight: 500;
+     text-decoration: none;
+     margin-left: 30px;
+     transition: 0.3s ease;
+     font-family: 'Comfortaa', cursive;
+}
+header .navigate .navigate-items a:before{
+    content : "";
+    position: absolute;
+    background:white;
+    width: 0%;
+    height:3px;
+    bottom: -5px;
+    left:0;
+    transition: 0.3 ease;
+}
+
+header .navigate .navigate-items a:hover:before{
+    width:100%;
+}
+
+.container{
+
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    scroll-snap-type: mandatory;
+}
+
+.container .section{
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: start;
+}
+
+.container .section:first-child{
+
+    background-image:url(Gallery/NmE1MjFhZDAxMTE3M2UyMThmZGMwOGY1YjkzY2Jj.thumb.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container .section:nth-child(2){
+
+    background-image:url(Gallery/Jerusalem1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container .section:nth-child(3){
+
+background-image:url(Gallery/Eilat1.jpg);
+background-size: cover;
+background-attachment: fixed;
+}
+
+.container .section:nth-child(4){
+
+background-image:url(Gallery/Haifa\ 2.jpg);
+background-size: cover;
+background-attachment: fixed;
+}
+.container .section .content h2 {
+
+    background: #fff;
+    color: #111;
+    font-weight: 600;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 20px;
+
+}
+
+.container .section .content p{
+
+    background: #fff;
+    color: #111;
+    font-weight: 300;
+    padding: 10px 10px;
+    margin-top: 10px;
+}
+.container .section .content{
+
+    position: relative;
+    bottom:-15%;
+    left:10px;
+    max-width: 450px;
+}
+
+
+
+
+
+
+@media (max-width: 1040px){
+    header{
+        padding: 12px 20px;
+      }
+
+    
+      header .navigate{
+        display: none;
+      }
+    
+      header .navigate.active{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(1, 1, 1, 0.5);
+      }
+    
+      header .navigate .navigate-items a{
+        color: #222;
+        font-size: 1.2em;
+        margin: 20px;
+      }
+    
+      header .navigate .navigate-items a:before{
+        background: #222;
+        height: 5px;
+      }
+    
+      header .navigate.active .navigate-items{
+        background: #fff;
+        width: 500px;
+        max-width: 500px;
+        margin: 20px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+      }
+    
+      .btn-menu{
+        background: url(Assets/list.png)no-repeat;
+        background-size: 30px;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    
+      }
+    
+      .btn-menu.active{
+        z-index: 999;
+        background: url(Assets/error.png)no-repeat;
+        background-size: 30px;
+        background-position: center;
+        transition: 0.3s ease;
+    
+      }
+
+      .container .section .content{
+
+        position: relative;
+        bottom:-10%;
+        left:10px;
+        max-width: 460px;
+    }
+
+    
+    }

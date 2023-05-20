@@ -1,0 +1,237 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+
+body{
+    height: 100vh;
+    background-image: linear-gradient(to right, rgba(9, 142, 231, 0.611), rgba(9, 142, 231, 0.611)), url('Gallery/akhil-lincoln-dSeQCOh_q7o-unsplash.jpg');
+    background-size: cover;
+
+
+}
+
+header img {
+
+    float: left;
+    width:15%;
+    height:15;
+    left:-15px;
+    position: relative;
+    top:-5px;
+
+}
+header{
+
+    z-index:999;
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+    transition: 0.5s ease;
+
+}
+
+header .brand{
+
+color:white;
+font-size: 26px;
+font-weight: 700;
+text-transform: uppercase;
+text-decoration: none;
+font-family: 'Bebas Neue', cursive;
+letter-spacing: 2px;
+align-items: center;
+text-shadow: 2px 1px 2px black;
+
+
+}
+
+header .navigate{
+
+position: relative;
+}
+
+ header .navigate .navigate-items a{
+     position:relative;
+     color:white ;
+     font-size: 1em;
+     font-weight: 500;
+     text-decoration: none;
+     margin-left: 30px;
+     transition: 0.3s ease;
+     font-family: 'Comfortaa', cursive;
+}
+header .navigate .navigate-items a:before{
+    content : "";
+    position: absolute;
+    background:white;
+    width: 0%;
+    height:3px;
+    bottom: -5px;
+    left:0;
+    transition: 0.3 ease;
+}
+
+header .navigate .navigate-items a:hover:before{
+    width:100%;
+}
+
+
+.container{
+    width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+    margin:100px;
+    
+}
+
+.row{
+
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+    left:30px;
+
+	
+
+}
+
+.cover-image{
+
+    background-color: rgb(25, 170, 228);
+    position: relative;
+    flex:1;
+    max-width: 330px;
+    height: 270px;
+    margin:20px;
+    overflow: hidden;
+    left:-25%;
+    top:15%;
+    margin:15px;
+    border-radius: 5%;
+
+}
+
+.cover-image img{
+
+    opacity:0.7;
+    position: relative;
+    vertical-align: top;
+    transition: 0.6s;
+    transition-property: opacity;
+    max-width: 550px;
+    height: 270px;
+
+}
+
+.cover-image:hover img {
+
+    opacity: 1;
+
+}
+.cover-image .details-image{
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: #fff;
+	width: 100%;
+	height: 100%;
+}
+
+.cover-image .details-image h2{
+	text-align: center;
+	font-size: 35px;
+	text-transform: uppercase;
+	font-weight: 300;
+	margin-top: 70px;
+	transition: 0.4s;
+	transition-property: transform;
+    text-shadow: 1px 1px 5px #000000;
+}
+
+.cover-image .details-image h2 span{
+	font-weight: 900;
+}
+
+.cover-image:hover .details-image h2{
+	transform: translateY(-30px);
+}
+
+@media (max-width: 1040px){
+    header{
+        padding: 12px 20px;
+      }
+
+    
+      header .navigate{
+        display: none;
+      }
+    
+      header .navigate.active{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(1, 1, 1, 0.5);
+      }
+    
+      header .navigate .navigate-items a{
+        color: #222;
+        font-size: 1.2em;
+        margin: 20px;
+      }
+    
+      header .navigate .navigate-items a:before{
+        background: #222;
+        height: 5px;
+      }
+    
+      header .navigate.active .navigate-items{
+        background: #fff;
+        width: 500px;
+        max-width: 500px;
+        margin: 20px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+      }
+    
+      .btn-menu{
+        background: url(Assets/list.png)no-repeat;
+        background-size: 30px;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    
+      }
+    
+      .btn-menu.active{
+        z-index: 999;
+        background: url(Assets/error.png)no-repeat;
+        background-size: 30px;
+        background-position: center;
+        transition: 0.3s ease;
+    
+      }
+    
+	}
+    
+    

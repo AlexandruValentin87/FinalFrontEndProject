@@ -1,0 +1,372 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+
+header img {
+
+    float: left;
+    width:15%;
+    height:15;
+    left:-15px;
+    position: relative;
+    top:-5px;
+
+}
+header{
+
+    z-index:999;
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+    transition: 0.5s ease;
+
+
+}
+
+header .brand{
+
+color:white;
+font-size: 26px;
+font-weight: 700;
+text-transform: uppercase;
+text-decoration: none;
+font-family: 'Bebas Neue', cursive;
+letter-spacing: 2px;
+align-items: center;
+text-shadow: 2px 1px 2px black;
+
+
+}
+
+header .navigate{
+
+position: relative;
+}
+
+ header .navigate .navigate-items a{
+     position:relative;
+     color:white ;
+     font-size: 1em;
+     font-weight: 500;
+     text-decoration: none;
+     margin-left: 30px;
+     transition: 0.3s ease;
+     font-family: 'Comfortaa', cursive;
+}
+header .navigate .navigate-items a:before{
+    content : "";
+    position: absolute;
+    background:white;
+    width: 0%;
+    height:3px;
+    bottom: -5px;
+    left:0;
+    transition: 0.3 ease;
+}
+
+header .navigate .navigate-items a:hover:before{
+    width:100%;
+}
+
+
+section{
+    padding: 100px 200px;
+  
+}
+
+
+.contact{
+
+
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: linear-gradient(to right, rgba(9, 142, 231, 0.411), rgba(9, 142, 231, 0.411)), url('Assets/adam-jang-Molhe1qQRWI-unsplash.jpg');
+    background-size: cover;
+    
+}
+
+
+
+.contact .content{
+
+    max-width: 500px;
+    text-align:left;
+    position: relative;
+    left:-38%;
+    top:60px;
+
+}
+.contact .content h2{
+    font-size: 36px;
+    font-weight: 500;
+    color:white;
+    position: relative;
+    font-family: 'Pattaya', sans-serif;
+   
+
+
+}
+
+
+.container{
+
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  
+}
+
+.container .contactInfo{
+
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.container .contactInfo .box{
+
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+}
+.container .contactInfo .box .icon{
+
+    min-width: 60px;
+    height: 60px;
+    background:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 26px;
+}
+
+.container .contactInfo .box .text{
+
+    display: flex;
+    margin-left:20px;
+    font-size: 16px;
+    color: white;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.container .contactInfo .box .text h3{
+    font-weight: 500;
+    color:white;
+    text-shadow:2px 1px 2px black;
+}
+
+.contactForm{
+
+    width: 40%;
+    padding:40px;
+    background:white;
+    
+}
+
+.contactForm h2{
+
+    font-size:30px;
+    color:#333;
+    font-weight: 500;
+}
+.contactForm .inputBox{
+
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+
+}
+.contactForm .inputBox input,
+.contactForm .inputBox textarea{
+
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border:none;
+    border-bottom: 2 px #333;
+    outline: none;
+    resize: none;
+
+}
+.contactForm .inputBox span{
+    position: absolute;
+    left:0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s ease;
+    color:#666;
+
+}
+
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span
+{
+
+    color: #174bf5;
+    font-size:12px;
+    transform : translateY(-20px);
+}
+
+.contactForm .inputBox input[type="submit"]{
+
+    width: 100px;
+    background: #174bf5;
+    color:#fff;
+    border:none;
+    cursor:pointer;
+    padding:10px;
+    font-size: 18px;
+}
+
+@media (max-width: 480px){
+
+    .contact .content h2{
+        font-size: 46px;
+        font-weight: 500;
+        color:white;
+        position: relative;
+        top:-50px;
+       left:-50%;
+     
+    
+    }
+}
+
+@media (max-width: 1040px){
+
+    .contact{
+
+        padding: 50px;
+
+    }
+    .contact .content{
+
+        max-width: 500px;
+        position: relative;
+        text-align: center;
+        left:15%;
+        top:90px;
+    
+    }
+    .contact .content h2{
+        font-size: 46px;
+        font-weight: 500;
+        color:white;
+        position: relative;
+        top:-50px;
+        left:-50%;
+      
+     
+    
+    }
+
+    .container{
+
+        flex-direction: column;
+    }
+
+    .container .contactInfo{
+
+        margin-bottom: 40px;
+    }
+
+    .container .contactInfo,
+    .contactForm{
+
+        width: 100%;
+
+    }
+
+    header{
+        padding: 12px 20px;
+      }
+    
+      section{
+        padding: 100px 20px;
+      }
+    
+      .home .icons{
+        right: 15px;
+      }
+    
+      header .navigate{
+        display: none;
+      }
+    
+      header .navigate.active{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(1, 1, 1, 0.5);
+      }
+    
+      header .navigate .navigate-items a{
+        color: #222;
+        font-size: 1.2em;
+        margin: 20px;
+      }
+    
+      header .navigate .navigate-items a:before{
+        background: #222;
+        height: 5px;
+      }
+    
+      header .navigate.active .navigate-items{
+        background: #fff;
+        width: 500px;
+        max-width: 500px;
+        margin: 20px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+      }
+    
+    .btn-menu{
+        background: url(Assets/list.png)no-repeat;
+        background-size: 30px;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    
+      }
+    
+      .btn-menu.active{
+        z-index: 999;
+        background: url(Assets/error.png)no-repeat;
+        background-size: 30px;
+        background-position: center;
+        transition: 0.3s ease;
+    
+      }
+}
